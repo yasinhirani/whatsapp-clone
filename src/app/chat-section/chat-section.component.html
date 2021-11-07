@@ -1,0 +1,78 @@
+<!-- <p>chat-section works!</p> -->
+<main class="flex-grow-1 h-100 d-flex flex-column overflow-hidden main bg-chats-color">
+    <header class="bg-secondary px-3 py-2 d-flex justify-content-between align-items-center">
+        <div class="profile d-flex align-items-center">
+            <figure class="mb-0 user">
+                <img src="assets/images/avatar.jpg" alt="">
+            </figure>
+            <div class="d-flex flex-column pl-3 text-white">
+                <h5 class="mb-0 font-weight-normal">{{userName}}</h5>
+                <small class="status" id="status"></small>
+            </div>
+        </div>
+        <div class="text-white d-flex align-items-center">
+            <span class="fa fa-search px-3 font-lg"></span>
+            <span class="fa fa-ellipsis-v px-3 font-lg"></span>
+        </div>
+    </header>
+    <div class="container-fluid flex-grow-1 px-5 overflow-auto">
+        <div *ngFor='let user_message of user_messages'>
+        <div class="chat-user d-flex justify-content-end text-white py-3">
+            <div class="d-flex flex-column user-message px-2 py-1">
+                <p class="mb-0">{{user_message.user_message}}</p>
+                <small class="text-right font-xs">{{user_message.user_time}}</small>
+            </div>
+        </div>
+    </div>
+    <div *ngFor='let friend_message of friend_messages'>
+        <div class="chat-friend d-flex justify-content-start text-white py-3">
+            <div class="d-flex flex-column friend-message px-2 py-1">
+                <p class="mb-0">{{friend_message.friend_message}}</p>
+                <small class="text-right font-xs">{{friend_message.friend_time}}</small>
+            </div>
+        </div>
+    </div>
+        <!-- <div class="chat-user d-flex justify-content-end text-white py-3">
+            <div class="d-flex flex-column user-message px-2 py-1">
+                <p class="mb-0">This is text message</p>
+                <small class="text-right font-xs">12:00 PM</small>
+            </div>
+        </div>
+        <div class="chat-friend d-flex justify-content-start text-white py-3">
+            <div class="d-flex flex-column friend-message px-2 py-1">
+                <p class="mb-0">This is text message</p>
+                <small class="text-right font-xs">12:00 PM</small>
+            </div>
+        </div>
+        <div class="chat-user d-flex justify-content-end text-white py-3">
+            <div class="d-flex flex-column user-message px-2 py-1">
+                <p class="mb-0">This is text message</p>
+                <small class="text-right font-xs">12:00 PM</small>
+            </div>
+        </div>
+        <div class="chat-friend d-flex justify-content-start text-white py-3">
+            <div class="d-flex flex-column friend-message px-2 py-1">
+                <p class="mb-0">This is text message</p>
+                <small class="text-right font-xs">12:00 PM</small>
+            </div>
+        </div>
+        <div class="chat-user d-flex justify-content-end text-white py-3">
+            <div class="d-flex flex-column user-message px-2 py-1">
+                <p class="mb-0">This is text message</p>
+                <small class="text-right font-xs">12:00 PM</small>
+            </div>
+        </div>
+        <div class="chat-friend d-flex justify-content-start text-white py-3">
+            <div class="d-flex flex-column friend-message px-2 py-1">
+                <p class="mb-0">This is text message</p>
+                <small class="text-right font-xs">12:00 PM</small>
+            </div>
+        </div> -->
+    </div>
+    <footer class="bg-secondary px-3 py-2 d-flex align-items-center">
+        <span class="fa fa-smile-o text-white font-xxl px-2"></span>
+        <span class="fa fa-paperclip text-white font-xxl px-2"></span>
+        <input class="bg-gray-dark message border-0 w-100 ml-2" type="text" onfocusin="focusInMessage()" onfocusout="focusOutMessage()" name="message" id="message" placeholder="Type a message">
+        <span class="fa fa-microphone text-gray font-xxl pl-4 pr-2" id="send"></span>
+    </footer>
+</main>

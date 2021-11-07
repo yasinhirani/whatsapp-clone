@@ -1,0 +1,35 @@
+.chats-list{
+    width: 400px;
+    flex: 0 0 400px;
+}
+.user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+.search-list{
+    border-radius: 20px;
+    padding: 8px 20px;
+    & .search{
+        width: 100%;
+        outline: 0;
+        margin-left: 8px;
+        color: $gray;
+    }
+}
+.user-list{
+    ul{
+        list-style: none;
+        li{
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                background: rgba($color: white, $alpha: .1);
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+<!-- <p>side-bar works!</p> -->
+<aside class="d-flex flex-column overflow-hidden bg-chats-color border-right border-gray h-100">
+    <header class="bg-secondary p-2 d-flex justify-content-between align-items-center">
+        <figure class="mb-0 user">
+            <img src="assets/images/avatar.jpg" alt="">
+        </figure>
+        <div class="d-flex align-items-center">
+            <span class="fa fa-circle-o-notch text-white px-2 font-lg"></span>
+            <span class="fa fa-commenting-o text-white px-2 font-lg"></span>
+            <span class="fa fa-ellipsis-v text-white px-2 font-lg"></span>
+        </div>
+    </header>
+    <div class="search-wrapper p-2 border-bottom border-gray">
+        <div class="search-list d-flex align-items-center bg-secondary">
+            <label for="search" class="mb-0"><span class="fa fa-search text-gray" id="search-chat"></span></label>
+            <input class="border-0 search bg-secondary" type="search" [(ngModel)] = "firstName" (ngModelChange)="search()" name="firstName" id="search" placeholder="Search or start a new chat">
+        </div>
+    </div>
+    <div class="user-list overflow-auto">
+        <ul class="p-0 m-0">
+            <li *ngFor="let chat of chats_list" (click)="getClicked(chat.name)">
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">{{chat.name}}</h5>
+                            <small>{{chat.time}}</small>
+                        </div>
+                        <small>{{chat.message}}</small>
+                    </div>
+                </div>
+            </li>
+            <!-- <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-flex px-2 pt-2">
+                    <figure class="mb-0 user">
+                        <img src="assets/images/avatar.jpg" alt="">
+                    </figure>
+                    <div
+                        class="user-chat text-white d-flex flex-column w-100 pl-3 pb-3 border-bottom border-gray">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="mb-0 font-weight-normal">Anonymous</h5>
+                            <small>12:00 PM</small>
+                        </div>
+                        <small>This is a dummy text message</small>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+</aside>

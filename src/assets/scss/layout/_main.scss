@@ -1,0 +1,74 @@
+// .main{
+//     background: url("../../../assets/images/background.jpg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+@mixin background($background) {
+    background-color: $background;
+}
+.user-message{
+    position: relative;
+    border-radius: 8px;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    z-index: 1;
+    @include background(#056162);
+    &:after{
+            position: absolute;
+            content: "";
+            width: 23px;
+            height: 20px;
+            left: -4px;
+            background-color: #056162;
+            transform: rotate(50deg);
+            top: 5px;
+            z-index: -1;
+    }
+    @include media-breakpoint-down(lg){
+        max-width: 400px;
+    }
+    @include media-breakpoint-down(md){
+        max-width: 250px;
+    }
+}
+.friend-message{
+    position: relative;
+    border-radius: 8px;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    z-index: 1;
+    @include background(#2a2f32);
+    &:after{
+            position: absolute;
+            content: "";
+            width: 23px;
+            height: 20px;
+            left: -4px;
+            background-color: #2a2f32;
+            transform: rotate(50deg);
+            top: 5px;
+            z-index: -1;
+    }
+    @include media-breakpoint-down(lg){
+        max-width: 400px;
+    }
+    @include media-breakpoint-down(md){
+        max-width: 250px;
+    }
+}
+.message{
+    padding: 8px 20px;
+    outline: 0;
+    border-radius: 20px;
+    color: $gray;
+}
+// .chat-user{
+    
+// }
+.idel{
+    background: url("../../../assets/images/idel.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
