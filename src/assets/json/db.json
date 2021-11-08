@@ -1,0 +1,76 @@
+{
+    "master":[
+         {
+            "id": 1,
+            "name": "Abc",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 2,
+            "name": "Def",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 3,
+            "name": "Ghi",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 4,
+            "name": "Jkl",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 5,
+            "name": "Mno",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 6,
+            "name": "Pqr",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 7,
+            "name": "Stu",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 8,
+            "name": "Vwx",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 9,
+            "name": "Yzz",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 10,
+            "name": "Yzz",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 11,
+            "name": "Yzz",
+            "time": "12:30",
+            "message": "This is dummy text"
+          },
+         {
+            "id": 12,
+            "name": "Yzz",
+            "time": "12:30",
+            "message": "This is dummy text"
+          }
+    ]
+}
